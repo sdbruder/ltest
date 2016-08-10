@@ -12,5 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $sql_version     = DB::select('SHOW VARIABLES LIKE "version";')[0]->Value;
+    $laravel_version = app()::VERSION;
+
+    return view('welcome', compact('sql_version', 'laravel_version'));
 });

@@ -33,12 +33,21 @@
             .title {
                 font-size: 96px;
             }
+            .versions {
+                font-size: 36px;
+            }
         </style>
     </head>
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">
+                    it works.
+                </div>
+                <div class="versions">
+                    Laravel {{ $laravel_version }}<br/>
+                    MySQL {{ $sql_version }}
+                </div>
             </div>
         </div>
     </body>
